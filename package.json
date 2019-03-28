@@ -1,0 +1,40 @@
+{
+  "name": "learn-vue-js-webpack",
+  "version": "1.0.0",
+  "description": "development front end with vue.js and bundle scripts with webpack",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --mode development --open",
+    "start": "webpack -p && node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mecsoccer/learn-vue-js-webpack.git"
+  },
+  "keywords": [
+    "node",
+    "vue.js",
+    "webpack"
+  ],
+  "author": "Jaachimma Onyenze",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mecsoccer/learn-vue-js-webpack/issues"
+  },
+  "homepage": "https://github.com/mecsoccer/learn-vue-js-webpack#readme",
+  "dependencies": {
+    "css-loader": "^2.1.1",
+    "script-loader": "^0.7.2",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "babel-loader": "^8.0.5",
+    "vue-loader": "^15.7.0"
+  }
+}
