@@ -5,8 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "npx babel src/index.js --out-file dist/main.js",
     "dev": "webpack-dev-server --mode development --open",
-    "start": "webpack -p && node server.js"
+    "start": "webpack -p && node server.js",
+    "build": "webpack --mode production --progress"
   },
   "repository": {
     "type": "git",
@@ -15,7 +17,8 @@
   "keywords": [
     "node",
     "vue.js",
-    "webpack"
+    "webpack",
+    "babel"
   ],
   "author": "Jaachimma Onyenze",
   "license": "MIT",
@@ -25,16 +28,21 @@
   "homepage": "https://github.com/mecsoccer/learn-vue-js-webpack#readme",
   "dependencies": {
     "css-loader": "^2.1.1",
+    "express-favicon": "^2.0.1",
     "script-loader": "^0.7.2",
     "style-loader": "^0.23.1",
+    "vue": "^2.6.10",
+    "vue-loader": "^15.7.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.3.3",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.3.1",
     "babel-loader": "^8.0.5",
-    "vue-loader": "^15.7.0"
+    "html-webpack-plugin": "^3.2.0",
+    "vue-template-compiler": "^2.6.10"
   }
 }

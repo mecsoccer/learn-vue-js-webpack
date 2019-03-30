@@ -1,5 +1,8 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-    const element = document.createElement('h1')
-    element.innerHTML = "Hello World"
-    document.body.appendChild(element)
+import Vue from 'vue';
+
+import App from './App.vue';
+
+new Vue({
+  el: '#app',
+  render: h => h(App)
 });

@@ -1,20 +1,20 @@
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
-    entry: [
-      './src/index.js',
-      './src/index.css'
-    ],
-    output: {
-      path: __dirname,
-      publicPath: '/',
-      filename: 'bundle.js'
-    },
     module: {
       rules: [
         {
           test: /\.js$/,
           exclude: /node_modules/,
           use: {
-            loader: "script-loader"
+            loader: "babel-loader"
+          }
+        },
+        {
+          test: /\.vue$/,
+          use: {
+            loader: "vue-loader"
           }
         },
         {
@@ -24,17 +24,16 @@ module.exports = {
               loader: "style-loader"
             },
             {
-              loader: "css-loader",
-              /*options: {
-                modules: true,
-                importLoaders: 1,
-                localIdentName: "[name]_[local]_[hash:base64]",
-                sourceMap: true,
-                minimize: true
-              }*/
+              loader: "css-loader"
             }
           ]
-        }
+        },
       ]
-    }
-  };
+    },
+    plugins: [
+      new VueLoaderPlugin(),
+      new HtmlWebpackPlugin({
+        template: './src/index.html'
+      })
+    ]
+};
