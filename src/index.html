@@ -1,19 +1,36 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <link rel="shortcut icon" type="image/x-icon" href="../public/favicon.ico"></link>
-    <title>Hello Vue</title>
+  <title>Production</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" type="image/x-icon" href="../public/favicon.ico"></link>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="icon" href="">
+  <title>Hello Vue</title>
 </head>
-
 <body>
-    <!-- Our vue app will be mounted on this DOM element -->
+    <div class="side-bar">
+        <div class="dark-theme sm-gap top-margin-20 bottom-margin-20">
+            <header class="logo-name">Uru-Ubi</header>
+        </div>
+        <div class="sm-gap dark-theme vh75 top-pad-15cent">
+            <ul class="side-nav-list sixteen medium">
+                <li class="side-nav-btn"><a class="format-link" href="./production-inputs.html">Production</a></li>
+                <li class="side-nav-btn"><a class="format-link" href="#">Records</a></li>
+                <li class="side-nav-btn"><a class="format-link" href="#">Investment</a></li>
+                <li class="side-nav-btn"><a class="format-link" href="#">Forecast</a></li>
+                <li class="side-nav-btn"><a class="format-link" href="#">Profile</a></li>
+                <li class="side-nav-btn"><a class="format-link" href="#">Sign Out</a></li>
+            </ul>
+        </div>
+    </div>
     <div id="app"></div>
-    <!-- Bundle will be injected below -->
 </body>
-
 </html>
